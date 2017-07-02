@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Regular Time Scouter</string>
+    <string name="dash_board">ダッシュボード</string>
+    <string name="regular_time_power">定時力</string>
+    <string name="average_time">平均退社時間</string>
+    <string name="best_time">最高退社時間</string>
+    <string name="worst_time">最低退社時間</string>
+    <string name="arrival">出社</string>
+    <string name="settings">設定</string>
 </resources>
