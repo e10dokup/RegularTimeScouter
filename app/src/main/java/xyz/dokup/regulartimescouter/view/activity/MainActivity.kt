@@ -1,7 +1,8 @@
-package xyz.dokup.regulartimescouter
+package xyz.dokup.regulartimescouter.view.activity
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
+import xyz.dokup.regulartimescouter.R
 
 class MainActivity : AppCompatActivity() {
 
