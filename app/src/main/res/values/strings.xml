@@ -9,4 +9,6 @@
     <string name="settings">設定</string>
     <string name="uncalcable">算出不能</string>
     <string name="leave">退社</string>
+    <string name="change_regular_time">定時を変更する</string>
+    <string name="regular_time">定時</string>
 </resources>
