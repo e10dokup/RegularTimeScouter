@@ -16,7 +16,7 @@ import xyz.dokup.regulartimescouter.viewmodel.base.ActivityViewModel
  */
 abstract class BaseActivity: AppCompatActivity() {
 
-    private val component by lazy {
+    val component by lazy {
         (application as MyApplication).component.plus(ActivityModule(this))
     }
 
@@ -64,7 +64,7 @@ abstract class BaseActivity: AppCompatActivity() {
 
         val bar = supportActionBar
         if (bar != null) {
-            bar.setTitle(toolbar.getTitle())
+            bar.title = toolbar.title
             bar.setDisplayHomeAsUpEnabled(true)
             bar.setDisplayShowHomeEnabled(true)
             bar.setDisplayShowTitleEnabled(true)

@@ -1,13 +1,16 @@
 package xyz.dokup.regulartimescouter.view.activity
 
+import android.databinding.DataBindingUtil
 import android.os.Bundle
-import android.support.v7.app.AppCompatActivity
+import android.view.Menu
+import android.view.MenuItem
 import xyz.dokup.regulartimescouter.R
 import xyz.dokup.regulartimescouter.databinding.ActivityMainBinding
+import xyz.dokup.regulartimescouter.view.activity.base.BaseActivity
 import xyz.dokup.regulartimescouter.viewmodel.MainActivityViewModel
 import javax.inject.Inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : BaseActivity() {
 
     @Inject
     lateinit var viewModel: MainActivityViewModel
@@ -17,6 +20,23 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        setContentView(R.layout.activity_main)
+        component.inject(this)
+        bindViewModel(viewModel)
+
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
+        binding.viewModel = viewModel
+
+    }
+
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.main, menu)
+        return true
+    }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when (item.itemId) {
+            R.id.action_settings -> viewModel.onSelectSettingMenu()
+        }
+        return super.onOptionsItemSelected(item)
     }
 }

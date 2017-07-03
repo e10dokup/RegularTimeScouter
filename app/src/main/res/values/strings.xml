@@ -7,4 +7,6 @@
     <string name="worst_time">最低退社時間</string>
     <string name="arrival">出社</string>
     <string name="settings">設定</string>
+    <string name="uncalcable">算出不能</string>
+    <string name="leave">退社</string>
 </resources>
