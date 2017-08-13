@@ -5,13 +5,16 @@ import android.databinding.ObservableBoolean
 import android.databinding.ObservableField
 import android.view.View
 import xyz.dokup.regulartimescouter.R
+import xyz.dokup.regulartimescouter.view.util.Navigator
 import xyz.dokup.regulartimescouter.viewmodel.base.ActivityViewModel
 import javax.inject.Inject
 
 /**
  * Created by e10dokup on 2017/07/02.
  */
-class MainActivityViewModel @Inject constructor(context: Context): ActivityViewModel() {
+class MainActivityViewModel @Inject constructor(
+        context: Context,
+        private val navigator: Navigator): ActivityViewModel() {
 
     val regularTimePower = ObservableField<String>()
     val averageTime = ObservableField<String>()
@@ -44,6 +47,6 @@ class MainActivityViewModel @Inject constructor(context: Context): ActivityViewM
     }
 
     fun onSelectSettingMenu() {
-
+        navigator.NavigateToSetting()
     }
 }

@@ -3,7 +3,7 @@ package xyz.dokup.regulartimescouter.di
 import android.content.Context
 import dagger.Module
 import dagger.Provides
-import xyz.dokup.regulartimescouter.model.OrmaDatabase
+import xyz.dokup.regulartimescouter.di.provider.OrmaProvider
 import javax.inject.Singleton
 
 /**
@@ -19,7 +19,7 @@ class AppModule(private val context: Context) {
 
     @Singleton
     @Provides
-    fun provideOrmaDatabase(context: Context): OrmaDatabase {
-        return OrmaDatabase.builder(context).build()
+    fun provideOrmaDatabase(context: Context): OrmaProvider {
+        return OrmaProvider(context)
     }
 }

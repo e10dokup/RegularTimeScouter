@@ -26,6 +26,8 @@ class MainActivity : BaseActivity() {
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main)
         binding.viewModel = viewModel
 
+        setSupportActionBar(binding.toolbar)
+
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {

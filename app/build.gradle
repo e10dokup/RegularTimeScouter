@@ -95,28 +95,28 @@ dependencies {
         exclude group: 'com.android.support', module: 'support-annotations'
     })
     implementation"org.jetbrains.kotlin:kotlin-stdlib-jre7:$kotlin_version"
-    compile "com.android.support:appcompat-v7:${supportLibraryVersion}"
-    compile "com.android.support:design:${supportLibraryVersion}"
+    implementation "com.android.support:appcompat-v7:${supportLibraryVersion}"
+    implementation "com.android.support:design:${supportLibraryVersion}"
     testImplementation 'junit:junit:4.12'
     implementation 'com.android.support.constraint:constraint-layout:1.0.2'
     kapt "com.android.databinding:compiler:2.3.2"
 
     // dagger
-    compile 'com.google.dagger:dagger:2.9'
+    implementation 'com.google.dagger:dagger:2.9'
 
     // rxjava
-    compile "io.reactivex.rxjava2:rxjava:2.1.1"
+    implementation "io.reactivex.rxjava2:rxjava:2.1.1"
     // rxandroid
-    compile 'io.reactivex.rxjava2:rxandroid:2.0.1'
+    implementation 'io.reactivex.rxjava2:rxandroid:2.0.1'
 
     // timber
-    compile 'com.jakewharton.timber:timber:4.3.0'
+    implementation 'com.jakewharton.timber:timber:4.3.0'
 
     // orma
-    compile 'com.github.gfx.android.orma:orma:4.2.3'
+    implementation 'com.github.gfx.android.orma:orma:4.2.3'
 
     // threetenabp
-    compile 'com.jakewharton.threetenabp:threetenabp:1.0.5'
+    implementation 'com.jakewharton.threetenabp:threetenabp:1.0.5'
 
     // kapt libraries
     kapt 'com.github.gfx.android.orma:orma-processor:4.2.3'
