@@ -39,7 +39,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="@dimen/margin_medium"
                 android:layout_marginBottom="@dimen/margin_medium"
-                android:text="19:00"
+                android:text="@{viewModel.regularTime}"
                 android:gravity="start"
                 android:layout_marginStart="@dimen/margin_small"
                 android:textSize="@dimen/text_medium"

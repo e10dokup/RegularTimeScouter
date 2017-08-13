@@ -11,4 +11,5 @@
     <string name="leave">退社</string>
     <string name="change_regular_time">定時を変更する</string>
     <string name="regular_time">定時</string>
+    <string name="have_not_set">未設定</string>
 </resources>

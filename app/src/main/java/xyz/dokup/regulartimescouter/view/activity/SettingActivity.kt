@@ -7,7 +7,6 @@ import android.widget.TimePicker
 import xyz.dokup.regulartimescouter.R
 import xyz.dokup.regulartimescouter.databinding.ActivitySettingBinding
 import xyz.dokup.regulartimescouter.view.activity.base.BaseActivity
-import xyz.dokup.regulartimescouter.viewmodel.MainActivityViewModel
 import xyz.dokup.regulartimescouter.viewmodel.SettingActivityViewModel
 import javax.inject.Inject
 
@@ -31,6 +30,6 @@ class SettingActivity : BaseActivity(), TimePickerDialog.OnTimeSetListener {
     }
 
     override fun onTimeSet(p0: TimePicker?, p1: Int, p2: Int) {
-
+        viewModel.onSetTarget(p1, p2)
     }
 }
